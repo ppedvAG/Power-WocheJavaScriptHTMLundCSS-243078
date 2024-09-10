@@ -1,0 +1,11 @@
+body {
+    background: linear-gradient(90deg, red, green,blue);
+}
+
+.container {
+    color: #639086;
+}
+
+#paragraph {
+    color: cadetblue;
+}

@@ -1,0 +1,14 @@
+body {
+    background-color: blue;
+}
+
+#headline {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+#rot {
+    color: red;
+}
