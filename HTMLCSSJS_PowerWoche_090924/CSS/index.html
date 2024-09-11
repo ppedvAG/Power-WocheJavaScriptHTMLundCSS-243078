@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling</title>
+    <style>
+
+        div {
+            background-color: green;
+            color: white;
+            width: 20%;
+            text-align: center;
+            margin: 0 auto;
+            /* 
+            Oben, Rechts, Unten, Links (4 Param) 
+            Oben/Unten & Rechts/Links  (2 Param)
+            Oben, Unten, Rechts, Links (1 Param)
+            */
+            border: solid 3px red;
+            padding: 30px;
+        }
+
+        p:nth-child(2) {
+            color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div>
+        Testbox
+        <p>Ich bin ein Paragraph</p>
+    </div>
+
+    <!-- <h1>Hallo</h1> -->
+    <p>Hallo</p>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animationen</title>
+
+    <style>
+
+        div {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: blue;
+            animation-name: example;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        /* @keyframes example {
+            from {background-color: blue;}
+            to {background-color: yellow;}
+        } */
+
+        @keyframes example {
+            0% {background-color: green; left: 0px; top: 0px;}
+            20% {background-color: aqua; left: 200px; top:  0px;}
+            40% {background-color: blueviolet; left: 200px; top: 200px;}
+            60% {background-color: crimson; left: 100px; top: 200px;}
+            80% {background-color: darkcyan; left: 0px; top: 100px;}
+            100% {background-color: cornsilk; left: 0px; top: 0px;}
+        }
+
+        span:nth-of-type(1) {
+            color: brown;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS Animationen</h1>
+    <div></div>
+    <p><b>Hinweis:</b>Wenn die Animation durchlaufen ist, bleibt er beim vordefinierten Style (in dem Fall blau)</p>
+
+    <span>Hallo1</span>
+    <span>Hallo2</span>
+    <span>Hallo3</span>
+    <span>Hallo4</span>
+    <span>Hallo5</span>
+
+</body>
+</html>
