@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    
+    <script>
+
+        // 1. Erstelle ein Array mit den Zahlen von 1 bis 20
+        let zahlen = [];
+        for (let i = 1; i <= 20; i++) {
+            zahlen.push(i);
+        }
+
+        // Bsp:
+        // let Zahlen = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+        
+        // 2. Verwende eine Schleife, um durch das Array zu laufen
+        for (let i = 0; i < zahlen.length; i++) {
+
+            // 3. Verwende If-Abfrage, um zu überprüfen:
+                //  3.1 Ist die Zahl durch 3 teilbar? => "Fizz"
+                //  3.2 Ist die Zahl durch 5 teilbar? => "Buzz"
+                //  3.3 Ist die Zahl durch 3 und 5 teilbar? => "FizzBuzz"
+            if (zahlen[i] % 3 === 0 && zahlen[i] % 5 === 0) {
+                console.log("FizzBuzz");
+            } else if (zahlen[i] % 3 === 0) {
+                console.log("Fizz");
+            } else if (zahlen[i] % 5 === 0) {
+                console.log("Buzz");
+            } else {
+                console.log(zahlen[i]);
+            }
+        }
+        
+
+    </script>
+
+</body>
+</html>

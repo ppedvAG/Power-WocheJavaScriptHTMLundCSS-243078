@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+
+        // appCodeName => Hersteller der Browser
+        document.write(navigator.appCodeName);
+
+        document.write(navigator.appName);
+
+        document.write("Bildschirm Hoehe: " + screen.height + "px");
+        document.write("Bildschirm Breite: " + screen.width + "px");
+
+          // availHeight, availWidth => Die Ausmaße der wirklich zur Verfuegung stehenden Flaeche auf
+        // dem Bildschirm, ohne die Windows-Taskleiste
+        document.write("Wirkliche Hoehe: " + screen.availHeight  + "px");
+        document.write("<br>");
+        document.write("Wirkliche Breite: " + screen.availWidth + "px");
+        document.write("<br>");
+
+        //alert("Meldefenster");
+
+        // var myWindow = window.open("", "myWindow", "width=200", "height=100");
+        // document.write(myWindow);
+
+        // Eingabefenster
+        //var promptTest = window.prompt("Geb deinen Namen ein!");
+
+        // Bestätigungsfenster
+        var confirmTest = window.confirm("Best#tige");
+
+    </script>
+</body>
+</html>

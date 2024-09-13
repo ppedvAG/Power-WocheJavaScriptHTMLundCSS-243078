@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>JavaScript Async</h1>
+    <p id="test"></p>
+
+    <script>
+
+        function meinBildschirm(etwas) {
+            document.getElementById("test").innerHTML = etwas;
+        }
+
+        async function meineFunktion() {
+            return "Hallo";
+        }
+
+        // Zweck: Diese Funktion als async deklarieren, was bedeutet, dass sie eine asynchrone Funktion ist
+        // Rückgabewert: "Hello" unser Rückgabewert. Da die Funktion asynchron ist, wird der Rückgabewert als ein Promise aufgelöst
+
+        meineFunktion()
+          .then(
+            function(wert) {
+                meinBildschirm(wert);
+            },
+            function(error) {
+                meinBildschirm(error);
+            }
+          )
+
+          // meineFunktion(): Diese Zeile ruft die asynchrone Funktion "meineFunktion" auf.
+          // .then(): Da meineFunktion ein Promise zurückgibt, verwenden wir die .then()-Methode,
+          // um die aufgelöste Promise zu verarbeiten
+          // Parameter Wert: (In diesem Fall unser "Hello")
+          // Der Wert ("Hello") wird an die Funktion (meinBildschirm) übergeben, => Wert wird in HTML-Element mit der ID "test" angezeigt
+          // Callback funktion(wert): Diese Funktion wird ausgeführt, wenn das Promise erfolgreich aufgelöst wurde.
+          // Callback funktion(error): Die Funktion ausgeführt, wenn das Promise abgelehnt wird.
+          // Heißt: Wenn Fehler => zu Funktion "meinBildschirm" => zum HTML-Element <p> mit der ID "test"
+
+    </script>
+</body>
+</html>

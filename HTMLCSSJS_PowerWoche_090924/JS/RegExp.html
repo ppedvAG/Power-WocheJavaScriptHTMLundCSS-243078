@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+<body>
+    
+    <p id="test"></p>
+    <p id="i"></p>
+
+    <script>
+        let text = "Hallo Welt!";
+        let n = text.search("Welt!");
+        document.getElementById("test").innerHTML = n;
+
+        // Regular Expression
+        let i = text.search(/Welt!/i);
+        document.getElementById("i").innerHTML = i;
+
+    </script>
+
+</body>
+</html>

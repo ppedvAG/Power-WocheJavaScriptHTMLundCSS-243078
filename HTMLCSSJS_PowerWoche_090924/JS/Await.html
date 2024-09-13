@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Await</title>
+</head>
+<body>
+    
+    <p id="test"></p>
+
+    <script>
+
+        async function meinBildschirm() {
+            let meinVersprechen = new Promise(function(resolve, reject) {
+                resolve("Kuck kuck!!!");
+            })
+
+            document.getElementById("test").innerHTML = await meinVersprechen
+        }
+
+        // Hier wird ein neues Promise erstellt und der Variable meinVersprechen zugewiesen.
+        // Das Promise nimmt zwei Parameter: resolve und das reject
+        // Innerhalb des Promises, eine Funktion "resolve" mit dem Wert "kuck kuck!!!"
+        // Wenn das Promise erfolgreich ausgelöst wird => "Kuck kuck!!!"
+
+        meinBildschirm()
+
+    </script>
+
+</body>
+</html>

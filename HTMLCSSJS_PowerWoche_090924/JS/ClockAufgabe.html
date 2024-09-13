@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+
+    <style>
+
+        #S_M {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Clock</h1>
+
+    <div id="con">
+        <span id="tag"></span>
+        <span id="S_M"></span>
+        <span id="M_Y_S"></span>
+    </div>
+
+    <script>
+        const monatName = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+
+        function time() {
+            let datum = new Date()
+
+            tag = datum.getDate().toString().padStart(2, "0");
+            stunde = datum.getHours().toString().padStart(2, "0");
+            minute = datum.getMinutes().toString().padStart(2, "0");
+            monat = monatName[datum.getMonth()]; // => Monat vom Array rausziehen mit den Kürzeln
+            jahr = datum.getFullYear();
+            sekunde = datum.getSeconds().toString().padStart(2, "0");
+
+            document.getElementById("tag").innerHTML = tag;
+            document.getElementById("S_M").innerHTML = stunde + ":" + minute;
+            document.getElementById("M_Y_S").innerHTML = monat +" "+ jahr +" "+ sekunde
+        }
+
+        setInterval(time, 1000);
+
+    </script>
+</body>
+</html>

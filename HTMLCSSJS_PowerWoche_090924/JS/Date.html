@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datum</title>
+</head>
+<body>
+    <script>
+
+        // Date - Objekt
+        const d = new Date();
+        document.write(d + "<br>");
+
+        // getFullYear()
+        document.write(d.getFullYear() + "<br>")
+
+        // 12.9.2024
+
+        //getDay() => speichert des in einer Variable
+        var tag = d.getDate();
+        //getMonth() => speichert des in einer Variable
+        var monat = d.getMonth() + 1;
+        //getFullYear() => speichert des in einer Variable
+        var jahr = d.getFullYear();
+
+        // Baut eine Ausgabe zusammen, in der ihr alle 3 Variablen zusammensetzt
+        document.write(tag + "." + monat + "." + jahr); 
+    </script>
+
+
+    <p id="year"></p>
+    <p id="monat"></p>
+
+    <script>
+        // Datum ändern
+
+        const set = new Date();
+        set.setFullYear(2020);
+        document.getElementById("year").innerHTML = set;
+
+        set.setMonth(3);
+        document.getElementById("monat").innerHTML = set;
+    </script>
+
+</body>
+</html>

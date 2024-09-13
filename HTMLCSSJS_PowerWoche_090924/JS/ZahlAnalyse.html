@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+
+    <script>
+
+        // Array für die Zahlen
+        const numbers = [5, 12, -3, 8, 15, -2];
+        const arrays = [];
+        let zaehler = 0;
+
+        // Funktion zum Überprüfen ob, eine Zahl größer als 10 ist
+        function checkNumbers() {
+            let groesserZehn = false;
+
+            for(let i = 0; i < numbers.length; i++) {
+                if(numbers[i] > 10) {
+                    zaehler++;
+                    groesserZehn = true;
+                    arrays.push(numbers[i]);
+                }
+            }
+
+            if(groesserZehn == true) {
+                if(zaehler > 1) {
+                    document.write(`Es gibt ${zaehler} Zahlen die größer als 10 sind: ${arrays}`);
+                }
+                else {
+                    document.write(`Es gibt ${zaehler} Zahl die größer als 10 sind: ${arrays}`);
+                }
+            } else {
+                document.write("Es gibt keine Zahl die größer als 10 ist");
+            }
+        }
+        checkNumbers();
+        document.write("<br>");
+
+        // Funktion zum Berechnen der Summe aller Zahlen
+        function calculateSum() {
+            let sum = 0;
+
+            for(let i = 0; i < numbers.length; i++) {
+                //sum = sum + numbers[i];
+                // Kürzere Schreibweise
+                sum += numbers[i];
+            }
+            document.write("Die Summe aller Zahlen beträgt: " + sum);
+        }
+        calculateSum();
+
+        // Funktion zum Entfernen negativer Zahlen aus der Liste
+
+        // Funktion zum Finden der maximalen Zahl in der Liste
+
+    </script>
+</body>
+</html>

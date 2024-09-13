@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objekte</title>
+</head>
+<body>
+    
+    <script>
+
+        // Konstruktor
+        function Auto(Marke, Modell) {
+            this.Marke = Marke;
+            this.Modell = Modell;
+        }
+
+        // Initialisierung des Objktes mit "new"
+        var Golf = new Auto("VW", "Golf VII");
+
+        // Objekt ausgeben:
+        document.write("Marke: " + Golf.Marke + "<br>");
+        document.write("Modell: " + Golf.Modell);
+
+        document.write("<br><br>");
+
+
+        // Neuen Konstruktor
+        function Trainer(name) {
+            this.name = name;
+        }
+
+        // Neue Person
+        var Kd = new Trainer("Klopp");
+
+        // Dynamisches Hinzufügen von Eigenschaften
+        Kd.Vorname = "Jürgen";
+        document.write(Kd.name + "<br>");
+        document.write(Kd.Vorname + "<br>"); // => "Jürgen"
+
+        // Dynamisches Löschen von Eigenschaften
+        delete Kd.Vorname
+        document.write(Kd.name + "<br>");
+        document.write(Kd.Vorname + "<br>"); // => "undefined"
+
+
+        // Test
+        // Ein Konstruktor "Person" der hat als Parameter (Vornamen, Name)
+        function Person(Vorname, Nachname) {
+            this.Vorname = Vorname;
+            this.Nachname = Nachname;
+        }
+
+        // Person anlegen: "Euch selber"
+        var Philipp = new Person("Philipp", "Libowicz");
+
+        // Ausgeben
+        document.write("Vorname: " + Philipp.Vorname + "<br>");
+        document.write("Name: " + Philipp.Nachname);
+
+
+        document.write("<br><br>");
+
+        // If-Anweisung:
+        // - Objekte auf bestimme Eigenschaften überprüfen
+        function Kunde(name) {
+            this.name = name;
+        }
+
+        var Kunden = new Kunde("Konstantin");
+
+        if(Kunden.name) {
+            document.write("Die Eigenschaft existiert");
+        } else {
+            document.write("Die Eigenschaft existiert nicht");
+        }
+
+        document.write("<br><br>");
+
+        // With Anweisung
+        // - Vereinfachte Schreibweise
+        function Spieler(name, vorname) {
+            this.name = name;
+            this.vorname = vorname;
+        }
+
+        var Sp = new Spieler("Ballack", "Michael");
+
+        with(Sp) {
+            document.write(name + "<br>");
+            document.write(vorname + "<br>");
+        }
+
+        // For-In-Anweisung
+        for(laufvariable in Sp) {
+            document.write("Eigenschaft: " + laufvariable + ", Wert: "
+                + Sp[laufvariable] + "<br>");
+        }
+
+        // Instanceof-Operator
+        function Fussballclub() {}
+        var Bayern = new Fussballclub();
+        if(Bayern instanceof Fussballclub)
+            document.write("Bayern ist eine Instanz von \"Fussballclub\"");
+
+    </script>
+
+</body>
+</html>

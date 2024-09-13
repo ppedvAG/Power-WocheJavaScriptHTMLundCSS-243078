@@ -1,0 +1,38 @@
+h1 {
+    padding-top: 20px;
+    text-decoration: underline;
+}
+
+#main-container {
+    background-color: bisque;
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+#form-div {
+    text-align: left;
+    width: 180px;
+    margin: 80px auto 0 auto;
+}
+
+.input-elements {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+#submit-btn {
+    margin: 0 auto;
+    font-size: 20px;
+    background-color: grey;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+#submit-btn:hover {
+    background-color: red;
+    border: 2px solid red;
+}

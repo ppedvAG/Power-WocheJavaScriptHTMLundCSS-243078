@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+
+    <script>
+
+        // Array erzeugen (1)
+        var bundesliga = new Array(); // leeres Feld
+
+        // Array befüllen (1)
+        bundesliga[1] = 100;
+        bundesliga[4] = "Dortmund";
+
+        // Array ausgeben
+        document.write(bundesliga[1]);
+        document.write(bundesliga[4]);
+
+
+        document.write("<br><br>");
+        // Array erzeugen (2)
+        var stadt = new Array(4); // Array mit 4 Elementen
+
+        // Array befuellen (2)
+        stadt[0] = "Berlin";
+        stadt[1] = "Muenchen";
+        stadt[2] = "Nuernberg";
+        stadt[3] = "Koeln";
+
+        // Array ausgeben lassen (2)
+        document.write(stadt[0] + "<br>");
+        document.write(stadt[1] + "<br>");
+        document.write(stadt[2] + "<br>");
+        document.write(stadt[3] + "<br>");
+
+        document.write("<br><br>");
+
+        // Array erzeugen & befuellen (3)
+        var Laender = ["Deutschland", "Österreich", "Schweiz", "Italien"];
+
+        // Array ausgeben (3)
+        document.write(Laender[0] + "<br>");
+        document.write(Laender[1] + "<br>");
+        document.write(Laender[2] + "<br>");
+        document.write(Laender[3] + "<br>");
+
+        document.write("<br><br>");
+
+        // Assoziative Arrays (4)
+        var Stadt = new Array();
+
+        // Felder befuellen (4)
+        Stadt["Wohnort"] = "Burghausen";
+        Stadt["Name"] = "Max Mustermann";
+
+        // Ausgeben (4)
+        document.write(Stadt["Wohnort"] + "<br>");
+        document.write(Stadt["Name"] + "<br>");
+
+        // ODER
+
+        var Wohnort = Stadt["Wohnort"];
+        var Name = Stadt["Name"];
+
+        document.write(Wohnort);
+        document.write(Name);
+
+        document.write("<br><br>");
+
+
+        // Array für die Methode Push()
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let push = fruits.push("Kiwi");
+        document.write(push)
+
+        document.write("<br><br>");
+
+        // Length
+        let size = fruits.length;
+        document.write(size);
+
+        document.write("<br><br>");
+
+        // toString()
+        let string = fruits.toString();
+        document.write(string);
+
+        document.write("<br><br>");
+
+        // join()
+        let join = fruits.join(" ; ");
+        document.write(join);
+
+        document.write("<br><br>");
+
+        // pop()
+        let pop = fruits.pop()
+        document.write(pop);
+
+        document.write("<br><br>");
+
+        // concat()
+        const myGirls = ["Laura", "Lili"];
+        const myBoys = ["Peter", "Hans", "Jürgen"];
+
+        // Ausgabe:
+        const myFriends = myGirls.concat(myBoys);
+        document.write(myFriends);
+
+        document.write("<br><br>");
+
+        // Einfache Statistik
+        // Folgende Infos
+        // 1. Die maximalste Zahl ausm Array => Mit ChatGPT
+        // 2. Die minimalste Zahl ausm Array
+        // 3. Die Anzahl der geraden Zahlen
+        // 4. Die Anzahl der ungeraden Zahlen
+
+        // 1. Array
+        let zahlen = [3, 7, 2, 8, 5, 10, 1, 4, 6, 9];
+
+        let maxZahl = zahlen[0];  // 10
+        let minZahl = zahlen[0];  // 1
+        let anzahlGerade = 0;     // Damit zählt die Geraden
+        let anzahlUngerade = 0;   // Damit zählt die Ungeraden
+
+        // Schleifen
+        for(let i = 0; i < zahlen.length; i++) {
+            if(zahlen[i] > maxZahl) {
+                maxZahl = zahlen[i];
+            }
+
+            if(zahlen[i] < minZahl) {
+                minZahl = zahlen[i];
+            }
+
+            if(zahlen[i] % 2 === 0) {
+                anzahlGerade++;
+            } else {
+                anzahlUngerade++
+            }
+        }
+
+        console.log("Maximale Zahl: " + maxZahl);
+        console.log("Minimale Zahl: " + minZahl);
+        console.log("Anzahl der geraden Zahlen: " + anzahlGerade);
+        console.log("Anzahl der ungeraden Zahlen: " + anzahlUngerade);
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

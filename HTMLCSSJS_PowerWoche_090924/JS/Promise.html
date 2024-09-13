@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+
+        // function test() {
+        //     return "Hallo welt";
+        // }
+
+        // // Arrow Funktion mit Variable
+        // hello = function() {
+        //     return "Hallo Welt!";
+        // }
+
+        // // Arrow funktion
+        // hello = () => {
+        //     return "Hello World!";
+        // }
+
+        // Ein einfachen Promise, der sich nach 2 auflöst
+        let einfacherPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Der Promise wurde erfüllt!");
+            }, 2000);
+        });
+
+        /*
+            - Wir erstellen einen neuen Promise mit "new Promise"
+            - Der Promise nimmt eine Funktion als Argument, die zwei Parameter hat: "resolve" und
+                "reject"
+            - In dieser Funktion verwenden wir "setTimeout", um nach 2 Sekunden den Promise mit "resolve zu erfüllen"
+                und die Nachricht "Der Promise wurde erfüllt!" zu übergeben
+        */
+
+        // Verwendung des Promises
+        einfacherPromise
+            .then(nachricht => {
+                document.write(nachricht); // Erwartete Ausgabe: "Der Promise wurde erfüllt!"
+            })
+            .catch(fehler => {
+                document.write(fehler);
+            })
+        /*
+            - Wir verwenden wir die Methode "then", um den Wert des erfüllten Promises zu verarbeiten. In
+                dem Fall geben wir die Nachricht auf der Webseite aus
+            - Wir verwenden die Methode "catch", um Fehler zu behandeln. falls der Promise abgelehnt wird.
+              In diesem Beispiel wird jedoch kein "reject" aufgerufen, wodurch der "catch" nicht aufgerufen wird
+        */
+
+        /*
+            Zusammenfassung:
+
+            - Ein Promise ist ein Objekt, das ein zukünftigen Wert repräsentiert
+            - Ein Promise hat zwei Hauptmethoden:
+                1. "then" für den Fall, dass der Promise erfüllt wird
+                2. "catch" für den Fall, das der Promise abgelehnt wird
+            - Im obigen Beispiel wird ein Promise nach 2 Sekunden erfüllt, und die Nachricht
+                "Der Promise wurde erfüllt!" wird ausgegeben
+        */
+
+
+    </script>
+</body>
+</html>
